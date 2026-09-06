@@ -1,5 +1,4 @@
 export interface PlayerInfo {
-    player: {
     idPlayer: string,
     strNationality: string,
     strPlayer: string,
@@ -12,5 +11,4 @@ export interface PlayerInfo {
     strHeight: string,
     strWeight: string,
     strThumb: string
-    }
 }

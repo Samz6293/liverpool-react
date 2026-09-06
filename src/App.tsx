@@ -2,10 +2,10 @@ import type { PlayerInfo } from "./types";
 import { Suspense } from "react";
 import Players from "./Components/Player/Players";
 
-async function playerDataPromise(): Promise<{ player: PlayerInfo[]}> {
+async function playerDataPromise(): Promise<PlayerInfo[]> {
     const response = await fetch('https://www.thesportsdb.com/api/v1/json/123/lookup_all_players.php?id=133602')
     const data = await response.json();
-    return data;
+    return data.player;
 }
 
 function App() {
