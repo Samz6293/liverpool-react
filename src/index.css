@@ -5,7 +5,12 @@ body {
     color: #ffffff;
 }
 
+/* * {
+  border: 1px solid red;
+} */
+
 @utility content-box {
   width: 80%;
   margin: 0 auto;
+  text-transform: uppercase;
 }
