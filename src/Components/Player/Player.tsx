@@ -8,47 +8,59 @@ const Player = ({player}: PlayerProps) => {
   return (
     <>
         {/* card border */}
-        <div className="flex flex-col content-box bg-linear-40 
-        from-[#cc0000de] from-1% to-[#180d04]  to-60%
-        rounded-xl p-4 my-4 max-w-5xl gap-5
-        sm:p-8 md:p-10">
+        <div className="content-box flex flex-col overflow-hidden
+        bg-linear-135 from-[#b40000] via-[260d08] to-[#0c0908]
+        rounded-2xl border border-red-900 shadow-2xl shadow-black/40 
+        p-5 my-4 max-w-5xl gap-5 
+        hover:border-red-500/60 hover:shadow-red-950/40
+        sm:p-8 sm:gao-7 md:p-10">
+
             {/* top row {position, number, status} */}
             <div className="flex justify-between text-xs items-center
             sm:text-sm md:text-lg">
-                  <p className="px-2 bg-linear-60 from-red-600 to-red-800 rounded-md font-black">{player.strPosition}</p>
-                  <p className="px-3 bg-slate-900 border-2 border-gray-700 rounded-sm"># {player.strNumber ? player.strNumber : "NA"}</p>
+                  <span className="px-2 py-1 bg-white/10 border border-white/10 rounded-full text-red-100
+                   font-bold tracking-wider backdrop-blur-2xl">{player.strPosition}</span>
+                  <span className="px-3 py-1 bg-black/40 border border-white/10  rounded-lg text-gray-300
+                  font-mono font-bold"># {player.strNumber || "NA"}</span>
             </div>
 
             {/* id name team nationality photo */}
             <div className="flex justify-between items-center">
               <div className="flex flex-col items-start">
-                <p className="text-xs font-light text-gray-500">#{player.idPlayer}</p>
-                <p className="text-2xl font-extrabold font-anybody
-                sm:text-4xl md:text-5xl lg:text-6xl">{firtstName}</p>
+                <p className="text-[10px] font-light text-gray-400 font-mono tracking-widest
+                sm:text-xs">#{player.idPlayer}</p>
+                <h2 className="text-2xl mt-1 font-extrabold font-anybody leading-none
+                sm:text-4xl md:text-5xl lg:text-6xl">{firtstName}</h2>
                 <p className="text-xl text-red-600 font-rainbow font-black 
-                sm:text-4xl md:text-5xl lg:text-6xl">{lastname}</p>
-                <p className="text-xs text-gray-200">{player.dateBorn} | {player.strNationality}</p>
-                <button className="inline-block  bg-linear-60 from-slate-100 to-slate-300 text-red-600 rounded-full px-5 my-1.5 py-0.5 font-anybody font-bold 
-                border-2 border-transparent hover:border-red-600 
-                active:bg-none active:bg-red-500 active:text-white">LIKE</button>
+                sm:text-4xl md:text-5xl lg:text-6xl">{lastname.join(" ")}</p>
+                <p className="mt-3 text-xs text-gray-300 tracking-wide">{player.dateBorn} · {player.strNationality}</p>
+                <button className="mt-3 px-5 py-1.5 bg-white text-red-600 rounded-full font-anybody font-bold text-xs
+                border-2 border-transparent transition-all duration-200 
+                hover:bg-red-600 hover:text-white hover:border-red-700 active:bg-red-400 active:scale-95
+                sm:px-6 sm:py-2">LIKE</button>
               </div>
-                <img src={player.strThumb} className="rounded-lg inline-block w-[45%]" alt="" />
+                <img src={player.strThumb} className="rounded-lg inline-block w-[45%] border border-white/10 shadow-2xl" alt={player.strPlayer} />
             </div>
 
 
             {/* weight age foot */}
-            <div className="flex justify-around
-            bg-gray-900 rounded-lg p-2 text-xs items-center">
+            <div className="flex justify-around items-center
+            bg-black/30 border border-white/5 rounded-xl px-3 py-3 backdrop-backdrop-blur-md text-xs 
+            sm:px-6 sm:py-4">
 
-              <div className="flex flex-col items-center">
-                <p className="text-slate-400">weight</p>
-                <p className="font-bold">{player.strWeight}</p>
+              <div className="flex flex-col items-center gap-0.5">
+                <p className="text-[10px] text-gray-500 tracking-widest
+                sm:text-xs">weight</p>
+                <p className="text-sm text-white font-bold
+                sm:text-base md:text-lg">{player.strWeight}</p>
               </div>
-              <hr className=" w-10 h-0.5 rotate-90 bg-slate-700 rounded-lg border-0"/>
+              <hr className="w-10 h-0.5 rotate-90 bg-gray-700 rounded-lg border-0"/>
               {/* <p className="px-4 bg-emerald-100 rounded-full text-emerald-700">Status: {player.strStatus}</p> */}
-              <div className="flex flex-col items-center">
-                <p className="text-slate-400">foot</p>
-                <p className="font-bold">{player.strSide ? player.strSide : "both"}</p>
+              <div className="flex flex-col items-center gap-0.5">
+                <p className="text-[10px] text-gray-500 tracking-widest
+                sm:text-xs">strong foot</p>
+                <p className="text-sm text-white font-bold
+                sm:text-base md:text-lg">{player.strSide || "both"}</p>
               </div>
 
 
