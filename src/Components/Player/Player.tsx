@@ -16,7 +16,7 @@ const Player = ({player}: PlayerProps) => {
         sm:p-8 sm:gao-7 md:p-10">
 
             {/* top row {position, number, status} */}
-            <div className="flex justify-between text-xs items-center
+            <div className="flex justify-between text-xs items-center select-none
             sm:text-sm md:text-lg">
                   <span className="px-2 py-1 bg-white/10 border border-white/10 rounded-full text-red-100
                    font-bold tracking-wider backdrop-blur-2xl">{player.strPosition}</span>
@@ -28,12 +28,12 @@ const Player = ({player}: PlayerProps) => {
             <div className="flex justify-between items-center">
               <div className="flex flex-col items-start">
                 <p className="text-[10px] font-light text-gray-400 font-mono tracking-widest
-                sm:text-xs">#{player.idPlayer}</p>
+                sm:text-xs select-none">#{player.idPlayer}</p>
                 <h2 className="text-2xl mt-1 font-extrabold font-anybody leading-none
-                sm:text-4xl md:text-5xl lg:text-6xl">{firtstName}</h2>
+                sm:text-4xl md:text-5xl lg:text-6xl select-none">{firtstName}</h2>
                 <p className="text-xl text-red-600 font-rainbow font-black 
-                sm:text-4xl md:text-5xl lg:text-6xl">{lastname.join(" ")}</p>
-                <p className="mt-3 text-xs text-gray-300 tracking-wide">{player.dateBorn} · {player.strNationality}</p>
+                sm:text-4xl md:text-5xl lg:text-6xl select-none">{lastname.join(" ")}</p>
+                <p className="mt-3 text-xs text-gray-300 tracking-wide select-none">{player.dateBorn} · {player.strNationality}</p>
                 <button className="mt-3 px-5 py-1.5 bg-white text-red-600 rounded-full font-anybody font-bold text-xs
                 border-2 border-transparent transition-all duration-200 
                 hover:bg-red-600 hover:text-white hover:border-red-700 active:bg-red-400 active:scale-95
@@ -46,7 +46,7 @@ const Player = ({player}: PlayerProps) => {
             {/* weight age foot */}
             <div className="flex justify-around items-center
             bg-black/30 border border-white/5 rounded-xl px-3 py-3 backdrop-backdrop-blur-md text-xs 
-            sm:px-6 sm:py-4">
+            sm:px-6 sm:py-4 select-none">
 
               <div className="flex flex-col items-center gap-0.5">
                 <p className="text-[10px] text-gray-500 tracking-widest
