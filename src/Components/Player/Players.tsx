@@ -8,9 +8,9 @@ export interface PlayerProps {
 
 const Players = ({playerDataPromise}: PlayerProps) => {
   const players = use(playerDataPromise);
-  console.log(players);
   return (
     <>
+        <h1 className="text-center font-anybody text-5xl p-5">Player List</h1>
         {players
         .filter((player) => player.strStatus === "Active")
         .map((player)=> <Player key={player.idPlayer} player={player}></Player>)}

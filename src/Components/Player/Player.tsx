@@ -21,16 +21,20 @@ const Player = ({player}: PlayerProps) => {
 
             {/* id name team nationality photo */}
             <div className="flex justify-between items-center">
-              <div>
+              <div className="flex flex-col items-start">
                 <p className="text-xs font-light text-gray-500">#{player.idPlayer}</p>
                 <p className="text-2xl font-extrabold font-anybody
                 sm:text-4xl md:text-5xl lg:text-6xl">{firtstName}</p>
                 <p className="text-xl text-red-600 font-rainbow font-black 
                 sm:text-4xl md:text-5xl lg:text-6xl">{lastname}</p>
                 <p className="text-xs text-gray-200">{player.dateBorn} | {player.strNationality}</p>
+                <button className="inline-block  bg-linear-60 from-slate-100 to-slate-300 text-red-600 rounded-full px-5 my-1.5 py-0.5 font-anybody font-bold 
+                border-2 border-transparent hover:border-red-600 
+                active:bg-none active:bg-red-500 active:text-white">LIKE</button>
               </div>
                 <img src={player.strThumb} className="rounded-lg inline-block w-[45%]" alt="" />
             </div>
+
 
             {/* weight age foot */}
             <div className="flex justify-around
@@ -46,6 +50,7 @@ const Player = ({player}: PlayerProps) => {
                 <p className="text-slate-400">foot</p>
                 <p className="font-bold">{player.strSide ? player.strSide : "both"}</p>
               </div>
+
 
             </div>
 
