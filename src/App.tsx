@@ -3,6 +3,8 @@ import { Suspense, useState } from "react";
 import Players from "./Components/Player/Players";
 import FavoritePlayers from "./Components/FavoritePlayers/FavoritePlayers";
 import { Slide, toast } from "react-toastify";
+import Nav from "./Components/Nav";
+import About from "./Components/About";
 
 async function playerDataPromise(): Promise<PlayerInfo[]> {
     const response = await fetch('https://www.thesportsdb.com/api/v1/json/123/lookup_all_players.php?id=133602')
@@ -51,12 +53,14 @@ function App() {
 
     return (
         <>
+            <Nav />
 
             <Suspense fallback={<p>Loading...</p>}>
                 <Players playerDataPromise={playersPromise} favoritePlayers={favoritePlayers} handleFavoritePlayers={handleFavoritePlayers}/>
             </Suspense>
 
             <FavoritePlayers favoritePlayers={favoritePlayers} handleFavoritePlayers={handleFavoritePlayers}/>
+            <About />
         </>
     )
 

@@ -12,7 +12,7 @@ const Players = ({playerDataPromise, favoritePlayers, handleFavoritePlayers}: Pl
     const players = use(playerDataPromise);
     return (
         <>
-            <h1 className="text-center font-anybody text-5xl p-5">Player List</h1>
+            <h1 className="text-center font-anybody text-5xl p-5 mt-20">Player List</h1>
 
             {players.filter((player) => player.strStatus === "Active")
             .map((player)=> <Player key={player.idPlayer} player={player} 

@@ -30,7 +30,7 @@ const FavoritePlayer = ({ player, handleFavoritePlayers }: FavPlayer) => {
       <div className="p-5 sm:p-6 flex flex-col flex-1">
         {/* Name section */}
         <div className="flex justify-between items-center">        
-            <div className="mb-3">
+            <div className="mb-3 select-none">
                 <span className="text-[10px] font-mono text-gray-500 tracking-widest uppercase">
                 #{player.idPlayer} · {player.strNationality}</span>
 
@@ -40,7 +40,7 @@ const FavoritePlayer = ({ player, handleFavoritePlayers }: FavPlayer) => {
                 <p className="text-xl sm:text-2xl font-black font-rainbow text-red-600 leading-tight">
                 {lastName.join(" ")}</p>
             </div>
-            <button className="p-4 text-2xl hover:text-red-600 transition-all duration-200"
+            <button className="p-4 text-2xl hover:text-red-600 transition-all duration-200 cursor-pointer"
             onClick={() => handleFavoritePlayers(player, true)}><RiDislikeLine /></button>
         </div>
 
