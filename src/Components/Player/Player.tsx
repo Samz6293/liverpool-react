@@ -18,7 +18,7 @@ const Player = ({player, favoritePlayers, handleFavoritePlayers}: PlayerProps) =
             <div className="content-box flex flex-col overflow-hidden
             bg-linear-135 from-[#b40000] via-[260d08] to-[#0c0908]
             rounded-2xl border border-red-900 shadow-2xl shadow-black/40 
-            p-5 my-4 max-w-5xl gap-5 
+            p-5 my-4 max-w-155 gap-5 
             hover:border-red-500/60 hover:shadow-red-950/40
             sm:p-8 sm:gao-7 md:p-10">
 
@@ -38,22 +38,22 @@ const Player = ({player, favoritePlayers, handleFavoritePlayers}: PlayerProps) =
                         sm:text-xs select-none">#{player.idPlayer}</p>
 
                         <h2 className="text-xl mt-1 font-extrabold font-anybody leading-none
-                        sm:text-4xl md:text-5xl lg:text-6xl select-none">{firtstName}</h2>
+                        sm:text-4xl md:text-5xl lg:text-5xl select-none">{firtstName}</h2>
 
-                        <p className="text-xl text-red-600 font-rainbow font-black 
-                        sm:text-4xl md:text-5xl lg:text-6xl select-none">{lastname.join(" ")}</p>
+                        <p className="text-lg text-red-600 font-rainbow font-black 
+                        sm:text-3xl md:text-4xl lg:text-5xl select-none">{lastname.join(" ")}</p>
 
-                        <p className="mt-3 text-xs text-gray-300 tracking-wide select-none">{player.dateBorn} · {player.strNationality}</p>
+                        <p className="text-[10px] text-gray-400 tracking-wide select-none">{player.dateBorn} · {player.strNationality}</p>
 
                         <button className="mt-3 px-5 py-0.5 bg-white text-red-600 rounded-full font-anybody font-bold text-xs
                         border-2 border-transparent transition-all duration-200 
                         hover:bg-red-600 hover:text-white hover:border-red-700 active:bg-red-400 active:scale-95
-                        sm:px-6 sm:py-2"
+                        sm:px-6 sm:py-2 cursor-pointer"
                         onClick={() => {handleLike()
                         }}>{!isFavorite ? "LIKE" : "DISLIKE"}</button>
                     </div>
 
-                    <img src={player.strThumb} className="rounded-lg inline-block w-[45%] border border-white/10 shadow-2xl" alt={player.strPlayer} />
+                    <img src={player.strThumb} className="rounded-lg inline-block w-[40%] border border-white/10 shadow-2xl" alt={player.strPlayer} />
                 </div>
 
 
