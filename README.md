@@ -1,3 +1,17 @@
+# Liverpool FC Squad & Favorites Dashboard
+
+A practice dashboard built with **React 19**, **TypeScript**, and **Tailwind CSS v4** that fetches Liverpool FC player data from TheSportsDB API, allows dynamic squad browsing, and manages a synchronized favorites shortlist with bidirectional controls and toast alerts.
+
+---
+
+## 📌 Project Overview & Purpose
+
+This is my first hands-on practice project using React. After completing fundamental modules covering JSX, component architecture, state management, and asynchronous data fetching, the goal was to step away from isolated code exercises and build a complete, interactive application from scratch.
+
+While I am still learning industry best practices and larger architectural patterns, this project serves as a practical application of the concepts I have covered so far—testing component interactions, breaking down layouts, and managing state across multiple levels.
+
+---
+
 ## 📂 Project Structure
 
 ```text
@@ -39,18 +53,7 @@ liverpool-react/
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
-
-# Liverpool FC Squad & Favorites Dashboard
-
-A practice dashboard built with **React 19**, **TypeScript**, and **Tailwind CSS v4** that fetches Liverpool FC player data from TheSportsDB API, allows dynamic squad browsing, and manages a synchronized favorites shortlist with bidirectional controls and toast alerts.
-
----
-
-## 📌 Project Overview & Purpose
-
-This is my first hands-on practice project using React. After completing fundamental modules covering JSX, component architecture, state management, and asynchronous data fetching, the goal was to step away from isolated code exercises and build a complete, interactive application from scratch.
-
-While I am still learning industry best practices and larger architectural patterns, this project serves as a practical application of the concepts I have covered so far—testing component interactions, breaking down layouts, and managing state across multiple levels.
+```
 
 ---
 
