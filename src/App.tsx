@@ -1,5 +1,5 @@
 import type { PlayerInfo } from "./types";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Players from "./Components/Player/Players";
 
 async function playerDataPromise(): Promise<PlayerInfo[]> {
@@ -7,12 +7,28 @@ async function playerDataPromise(): Promise<PlayerInfo[]> {
     const data = await response.json();
     return data.player;
 }
+const playersPromise = playerDataPromise();
 
 function App() {
+
+    // like status and count for player
+    const [favoritePlayers, setFavoritePlayers] = useState<PlayerInfo[]>([]);
+    const handleFavoritePlayers = (player: PlayerInfo, isFavorite:boolean) => {
+        if(isFavorite) {
+            const newFavorites = favoritePlayers.filter(favPlayer => favPlayer.idPlayer !== player.idPlayer)
+            setFavoritePlayers(newFavorites);
+        }
+        else {
+            const newFavorites = [...favoritePlayers, player];
+            setFavoritePlayers(newFavorites);
+        }
+    }
+
+
     return (
         <>
             <Suspense fallback={<p>Loading...</p>}>
-                <Players playerDataPromise={playerDataPromise()}></Players>
+                <Players playerDataPromise={playersPromise} favoritePlayers={favoritePlayers} handleFavoritePlayers={handleFavoritePlayers}></Players>
             </Suspense>
         </>
     )
