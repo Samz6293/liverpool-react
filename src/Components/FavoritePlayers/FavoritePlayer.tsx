@@ -3,12 +3,13 @@ import type { PlayerInfo } from "../../types";
 import { RiDislikeLine } from "react-icons/ri";
 
 export interface FavPlayer {
-  player: PlayerInfo;
+    player: PlayerInfo;
+    handleFavoritePlayers: (player: PlayerInfo, isFavorite: boolean) => void
 }
 
-const FavoritePlayer = ({ player }: FavPlayer) => {
-  const [firstName, ...lastName] = player.strPlayer.split(" ");
-  const [isExpanded, setIsExpanded] = useState(false);
+const FavoritePlayer = ({ player, handleFavoritePlayers }: FavPlayer) => {
+    const [firstName, ...lastName] = player.strPlayer.split(" ");
+    const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <article className="flex flex-col bg-[#0e0a0b] max-w-100 min-w-67.5 rounded-2xl border border-white/10 overflow-hidden  shadow-2xl shadow-black/70 hover:border-red-600/50 hover:shadow-red-950/40 transition-all duration-300
@@ -35,11 +36,12 @@ const FavoritePlayer = ({ player }: FavPlayer) => {
 
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-anybody text-white leading-none mt-1">
                 {firstName}</h3>
+
                 <p className="text-xl sm:text-2xl font-black font-rainbow text-red-600 leading-tight">
                 {lastName.join(" ")}</p>
             </div>
-
-            <button className="p-4 text-2xl hover:text-red-600 transition-all duration-200"><RiDislikeLine /></button>
+            <button className="p-4 text-2xl hover:text-red-600 transition-all duration-200"
+            onClick={() => handleFavoritePlayers(player, true)}><RiDislikeLine /></button>
         </div>
 
 

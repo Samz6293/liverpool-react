@@ -56,7 +56,7 @@ function App() {
                 <Players playerDataPromise={playersPromise} favoritePlayers={favoritePlayers} handleFavoritePlayers={handleFavoritePlayers}/>
             </Suspense>
 
-            <FavoritePlayers favoritePlayers={favoritePlayers}/>
+            <FavoritePlayers favoritePlayers={favoritePlayers} handleFavoritePlayers={handleFavoritePlayers}/>
         </>
     )
 
