@@ -11,7 +11,7 @@ const FavoritePlayer = ({ player }: FavPlayer) => {
 
   return (
     <article className="flex flex-col bg-[#0e0a0b] max-w-100 min-w-67.5 rounded-2xl border border-white/10 overflow-hidden  shadow-2xl shadow-black/70 hover:border-red-600/50 hover:shadow-red-950/40 transition-all duration-300
-    mx-auto m-6">
+     m-6">
       {/* Top cover image filling full card width */}
       <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-black/40">
         <img

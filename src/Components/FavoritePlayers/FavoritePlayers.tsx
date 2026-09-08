@@ -8,7 +8,7 @@ const FavoritePlayers = ({favoritePlayers}: FavouriteProps) => {
     return (
         <>
             <h1 className="text-center font-anybody text-5xl p-5">Favourite Players</h1>
-            <div className="content-box flex flex-wrap justify-evenly items-start">
+            <div className="content-box flex flex-wrap justify-center items-start w-fit">
                 {favoritePlayers.map((player)=> <FavoritePlayer key={player.idPlayer} player={player}/>)}
             </div>
         </>
