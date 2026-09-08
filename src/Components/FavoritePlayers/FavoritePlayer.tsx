@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { PlayerInfo } from "../../types";
+import { RiDislikeLine } from "react-icons/ri";
 
 export interface FavPlayer {
   player: PlayerInfo;
@@ -27,17 +28,20 @@ const FavoritePlayer = ({ player }: FavPlayer) => {
       {/* Card body content */}
       <div className="p-5 sm:p-6 flex flex-col flex-1">
         {/* Name section */}
-        <div className="mb-3">
-          <span className="text-[10px] font-mono text-gray-500 tracking-widest uppercase">
-            #{player.idPlayer} · {player.strNationality}
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-extrabold font-anybody text-white leading-none mt-1">
-            {firstName}
-          </h3>
-          <p className="text-xl sm:text-2xl font-black font-rainbow text-red-600 leading-tight">
-            {lastName.join(" ")}
-          </p>
+        <div className="flex justify-between items-center">        
+            <div className="mb-3">
+                <span className="text-[10px] font-mono text-gray-500 tracking-widest uppercase">
+                #{player.idPlayer} · {player.strNationality}</span>
+
+                <h3 className="text-2xl sm:text-3xl font-extrabold font-anybody text-white leading-none mt-1">
+                {firstName}</h3>
+                <p className="text-xl sm:text-2xl font-black font-rainbow text-red-600 leading-tight">
+                {lastName.join(" ")}</p>
+            </div>
+
+            <button className="p-4 text-2xl hover:text-red-600 transition-all duration-200"><RiDislikeLine /></button>
         </div>
+
 
         {/* Description & Read more toggle */}
         <div className="mt-auto pt-2">
