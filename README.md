@@ -1,3 +1,5 @@
+🔗 **[Live Demo](https://liverpool-players-react.netlify.app/)**
+
 # Liverpool FC Squad & Favorites Dashboard
 
 A practice dashboard built with **React 19**, **TypeScript**, and **Tailwind CSS v4** that fetches Liverpool FC player data from TheSportsDB API, allows dynamic squad browsing, and manages a synchronized favorites shortlist with bidirectional controls and toast alerts.
@@ -9,6 +11,16 @@ A practice dashboard built with **React 19**, **TypeScript**, and **Tailwind CSS
 This is my first hands-on practice project using React. After completing fundamental modules covering JSX, component architecture, state management, and asynchronous data fetching, the goal was to step away from isolated code exercises and build a complete, interactive application from scratch.
 
 While I am still learning industry best practices and larger architectural patterns, this project serves as a practical application of the concepts I have covered so far—testing component interactions, breaking down layouts, and managing state across multiple levels.
+
+---
+
+## 📸 Screenshots
+
+### Player List View
+![Player List View](./src/Assets/player-list.png)
+
+### Favourite Players
+![Favourite Players View](./src/Assets/favorite-players.png)
 
 ---
 
@@ -53,6 +65,25 @@ liverpool-react/
 ├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
+```
+
+---
+
+## 🚀 Getting Started Locally
+
+Follow these steps to clone the repository and run the project locally.
+
+### Prerequisites
+
+Ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [Git](https://git-scm.com/)
+
+```bash
+git clone [https://github.com/Samz6293/liverpool-react.git](https://github.com/Samz6293/liverpool-react.git)
+cd liverpool-react
+npm install
+npm run dev
 ```
 
 ---
